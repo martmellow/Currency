@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title> Currency Agent</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+    <form name="converter">
+ <div class="main"> 
+      <nav>
+        <div class="logo">
+           <img src = "image/Untitled-1.png" height="450">
+          </div>
+         
+    </nav>
+     
+    <div class="Bath">
+         Input currency(Bath) 
+        <input type="number" name="bath" required>
+    </div> 
+         
+     <div class="container">
+        <input class="btn btn1" type="button" value="Convert" onclick="currencyConverter(converter.bath.value)">
+        <input class="btn btn2" type="reset" value="reset form">
+     </div>
+      
+     <div class="Dollar">
+        Dollar:(America)
+        <input id="dollar">
+     </div> 
+
+     <div class="Euro">
+         Euro:(Europe)
+         <input id="euro">
+    </div>
+
+    <div class="Pound">
+        Pound(England)
+        <input id="pound">
+    </div>
+
+    <div class="Yuan">
+        Yuan:(China)
+        <input id="yuan">
+    </div>
+
+    <div class="Won">
+        Won:(Korea)
+        <input id="won">
+    </div>
+
+    <div class="Yen">
+        Yen:(Japan)
+        <input id="yen">
+    </div>
+    
+         
+
+  </div>
+</form>
+  </body>
+
+  <script>
+    function currencyConverter(valNum){
+        if(converter.bath.value <= 0 )
+        window.alert("Enter value morethan 0")
+        else
+        document.getElementById("dollar").value =(valNum/32.38).toFixed(2);
+        document.getElementById("euro").value =(valNum/35.28).toFixed(2);
+        document.getElementById("pound").value =(valNum/40.34).toFixed(2);
+        document.getElementById("yuan").value =(valNum*0.22).toFixed(2);
+        document.getElementById("won").value =(valNum*37.73).toFixed(2);
+        document.getElementById("yen").value =(valNum*37.73).toFixed(2);
+    }
+    </script>
+
+  
+</html>
